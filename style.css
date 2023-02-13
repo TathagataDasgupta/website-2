@@ -1,5 +1,3 @@
-
-
 *{
     margin: 0;
     padding: 0;
@@ -14,17 +12,23 @@
     min-height: 100vh;
     padding-left: 50px;
     padding-top: 10px;
+    background-repeat: no-repeat;
   
     
 }
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .nav-link{
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 20px 100px;
     display: flex;
-    justify-content: space-between;
+    flex: 1;
+    text-align: right;
+    justify-content: flex-end;
     align-items: center;
 }
 nav img{
@@ -148,4 +152,91 @@ nav img{
     height: 100%;
     background: #017143;
     clip-path: circle(600px at right 800px );
+}
+.nav-link ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: #017143;
+    display: block;
+    margin: auto;
+    transition: ease-out 0.2s;
+    transition: ease-in 0.5s;
+   
+}
+.nav-link ul li:hover::after{
+    width: 100%;
+}
+nav .fa{
+    display : none
+}
+@media (max-width:700px){
+    header{
+        padding:20px;
+    }
+    header .logo{
+        max-width: 60px;
+    }
+    header.nav-link ul{
+        display: none;
+    }
+    .content{
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .content .textbox h2{
+        font-size: 25px;
+    }
+    .content .textbox p{
+        font-size: 15px;
+    }
+    nav {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .nav-link ul li{
+        display: block;
+
+    }   
+    .nav-link {
+        position: fixed;
+        background: #fff7f3;
+        height: 100vh;
+        width: 400px;
+        top: 0;
+        right:-200px ;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: rgb(0, 0, 0);
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .nav-link ul {
+        padding: 30px;
+    }
+    .circle{
+        clip-path: circle(400px at center bottom);
+    }
+    .content .textbox{
+        max-width: 100%;
+    }
+    .content .imgBox{
+        max-width: 100%;
+        justify-content: center;
+    }
+    .content .imgBox img{
+        max-width :250px;
+    }
+    .thumb li img{
+        max-width:40px;
+       
+    }
+
+        
 }

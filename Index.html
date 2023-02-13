@@ -33,6 +33,7 @@
             <li><a href="">Store</a></li>
           </ul>
         </div>
+        <i class="fa fa-bars" onclick="showMenu()" ></i>
       </nav>
       <div class="content">
         <div class="textbox">
@@ -65,7 +66,15 @@
         </ul>
         -->
     </section>
-<!---
+    <br>
+
+<!---------------gift-------------->
+<section class="gift">
+  <h1><span>STARBUCKS</span> or nothing </h1>
+  
+</section>
+
+<!----
     <script type="text/javascript">
      function changeImage1()
     {
@@ -97,6 +106,13 @@
             const circle=document.getElementById('Circle');
             circle.style.backgroundColor = color;
         }
+        var navLink = document.getElementById("navLink");
+        function showMenu(){
+            navLink.style.right="0px"
+        }
+        function hideMenu(){
+            navLink.style.right="-500px"
+        }        
     </script>
   </body>
 </html>
